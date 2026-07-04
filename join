@@ -1,0 +1,6 @@
+SELECT ES.employee_id, ES.first_name,ES.last_name,ED.gender,ES.occupation,ES.dept_id,pd.department_name,ES.salary,ED.age,ED.birth_date
+FROM employee_salary ES
+LEFT JOIN employee_demographics ED
+ ON ED.employee_id = ES.employee_id
+ INNER JOIN parks_departments pd
+  on ES.dept_id = pd.department_id;
